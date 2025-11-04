@@ -1,11 +1,18 @@
-.team-grid {
-  display: grid;
-  gap: var(--space-sm);
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+h2 {
+  font-family: cursive;
+  font-size: 40px;
 }
 
-.team-grid article {
-  border: 1px solid rgba(15, 23, 42, 0.08);
+.subteam-members{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subteam-members th,
+.subteam-members td {
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .values-list {
