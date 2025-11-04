@@ -1,0 +1,92 @@
+.calendar-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-controls button {
+  background-color: #fff;
+  color: #d32f2f;
+  border: 2px solid #d32f2f;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-controls button:hover {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.calendar {
+  background-color: #d32f2f;
+  color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#calendar-title {
+  font-family: 'Lemon';
+  font-size: 1.5rem;
+  color: white;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+}
+
+.day-name, .day {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.day-name {
+  font-weight: bold;
+  color: white;
+}
+
+.day {
+  background-color: white;
+  color: black;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 500;
+}
+
+.day.event-day {
+  border: 2px solid #b71c1c;
+}
+
+.event-link {
+  font-size: 0.65rem;
+  color: #d32f2f;
+  text-decoration: none;
+  margin-top: 4px;
+  text-align: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: #fff0f0;
+  transition: background 0.2s;
+}
+
+.event-link:hover {
+  background-color: #ffd6d6;
+}
