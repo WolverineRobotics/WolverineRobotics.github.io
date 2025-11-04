@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
   {% if page.stylesheets %}
     {% for sheet in page.stylesheets %}
   <link rel="stylesheet" href="{{ '/assets/css/' | append: sheet | append: '.css' | relative_url }}">
@@ -15,26 +17,51 @@
 </head>
 <body class="page {% if page.body_class %}{{ page.body_class }}{% endif %}">
   <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="{{ '/' | relative_url }}">Wolverine Robotics</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a class="site-nav__link" href="{{ '/' | relative_url }}">Home</a>
-        <a class="site-nav__link" href="{{ '/about/' | relative_url }}">About</a>
-        <a class="site-nav__link" href="{{ '/events/' | relative_url }}">Events</a>
-        <a class="site-nav__link" href="{{ '/sponsors/' | relative_url }}">Sponsors</a>
-        <a class="site-nav__link" href="{{ '/blog/' | relative_url }}">Blog</a>
-        <a class="site-nav__link" href="{{ '/contact/' | relative_url }}">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="site-header__inner">
+    <img src="{{ '/assets/images/logo.svg | relative_url }}" alt="Team 5596 Logo" class="brand-logo">
+    <span class="brand-name">Team 5596</span>
+    <nav class="site-nav" aria-label="Primary">
+      <a class="site-nav__link" href="{{ '/' | relative_url }}">Home</a>
+      <a class="site-nav__link" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="site-nav__link" href="{{ '/events/' | relative_url }}">Events</a>
+      <a class="site-nav__link" href="{{ '/sponsors/' | relative_url }}">Sponsors</a>
+      <a class="site-nav__link" href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a class="site-nav__link" href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
   {{ content }}
 
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p>&copy; {{ site.time | date: '%Y' }} Wolverine Robotics. All rights reserved.</p>
-      <p>Built with Jekyll.</p>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/footer.css">
+
+  <footer class="custom-footer">
+  <div class="footer-top">
+    <div class="footer-left">
+      <h2>Follow Us</h2>
+      <p>CHECK OUT OUR OFFICIAL ACCOUNTS</p>
     </div>
-  </footer>
+    <div class="footer-right">
+      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="twitter.svg" alt="Twitter" /></a>
+      <a href="#"><img src="youtube.svg" alt="YouTube" /></a>
+    </div>
+  </div>
+
+  <div class="footer-middle"></div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2015–2025 Wolverine Community Robotics</p>
+  </div>
+</footer>
+
+
+
 </body>
 </html>
