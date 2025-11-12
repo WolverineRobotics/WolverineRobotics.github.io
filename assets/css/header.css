@@ -1,7 +1,7 @@
 
 .site-header {
-  background-color: #A00303;
-  border-radius: 12px;
+  background-color: var(--color-red);
+  border-radius: var(--radius-lg);
   padding: 0.5rem 1.5rem;
   margin: 1rem auto;
   max-width: 95%;
@@ -25,10 +25,10 @@
 }
 
 .brand-name {
-  font-family: 'Lemon', serif;
+  font-family: var(--font-brand);
   font-size: 1.8rem;
-  font-weight: 600; 
-  color: #fff;      
+  font-weight: 600;
+  color: var(--color-white);
   margin-left: 0.5rem;
 }
 
@@ -41,9 +41,9 @@
 }
 
 .site-nav__link {
-  color: #fff;
+  color: var(--color-white);
   text-decoration: none;
   font-weight: 400;
-  transition: color 0.2s ease;
+  transition: color var(--transition-normal);
 }
 

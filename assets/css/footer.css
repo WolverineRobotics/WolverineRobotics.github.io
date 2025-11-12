@@ -1,29 +1,29 @@
 .custom-footer {
-  font-family: "Poppins", sans-serif;
-  color: white;
+  font-family: var(--font-body);
+  color: var(--color-white);
   margin-top: 40px;
 }
 
 
 .footer-top {
-  background-color: #ffffff;
-  color: black;
+  background-color: var(--color-white);
+  color: var(--color-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 50px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
 }
 
 .footer-left h2 {
-  font-family: "Lemon", serif;
+  font-family: var(--font-brand);
   font-size: 1.9rem;
   margin: 0;
 }
 
 .footer-left p {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-body);
   font-size: 0.95rem;
   margin: 5px 0 0 0;
 }
@@ -37,7 +37,7 @@
   width: 35px;
   height: 35px;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-slow);
   filter: grayscale(100%);
 }
 
@@ -48,13 +48,13 @@
 
 
 .footer-middle {
-  background-color: #a42119; /* red section */
+  background-color: var(--color-red-dark);
   height: 200px;
 }
 
 
 .footer-bottom {
-  background-color: #000000;
+  background-color: var(--color-black);
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;

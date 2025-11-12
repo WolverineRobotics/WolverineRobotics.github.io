@@ -5,7 +5,7 @@
 }
 
 .contact-card {
-  border: 1px solid rgba(2, 48, 71, 0.12);
+  border: 1px solid var(--color-navy-alpha-12);
 }
 
 .contact-card ul {
@@ -17,15 +17,15 @@
 }
 
 .hours {
-  border-left: 4px solid rgba(2, 48, 71, 0.25);
+  border-left: 4px solid var(--color-navy-alpha-25);
 }
 
 .media-banner {
   display: grid;
   gap: var(--space-xs);
   justify-items: start;
-  background: linear-gradient(120deg, #023047, #035e7b);
-  color: #fff;
+  background: var(--gradient-navy-contact);
+  color: var(--color-white);
 }
 
 .media-banner a {

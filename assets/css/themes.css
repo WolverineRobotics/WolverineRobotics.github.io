@@ -1,0 +1,67 @@
+/* ============================================
+   WOLVERINE ROBOTICS THEME SYSTEM
+   All color, spacing, and design tokens
+   ============================================ */
+
+:root {
+  /* === PRIMARY BRAND COLORS === */
+  --color-navy: #023047;
+  --color-gold: #ffb703;
+  --color-red: #A00303;
+  --color-red-dark: #a42119;
+
+  /* === NEUTRAL COLORS === */
+  --color-slate: #1f2933;
+  --color-muted: #6b7280;
+  --color-bg: #f4f7fb;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-slate: #0f172a;
+
+  /* === GRADIENT COLORS === */
+  --color-navy-light: #035e7b;
+  --color-navy-medium: #134e5e;
+
+  /* === OPACITY VARIANTS === */
+  --color-navy-alpha-10: rgba(2, 48, 71, 0.1);
+  --color-navy-alpha-12: rgba(2, 48, 71, 0.12);
+  --color-navy-alpha-25: rgba(2, 48, 71, 0.25);
+  --color-navy-alpha-08: rgba(2, 48, 71, 0.08);
+  --color-navy-alpha-95: rgba(2, 48, 71, 0.95);
+  --color-navy-medium-alpha-95: rgba(19, 78, 94, 0.95);
+  --color-white-alpha-75: rgba(255, 255, 255, 0.75);
+  --color-white-alpha-85: rgba(255, 255, 255, 0.85);
+  --color-shadow: rgba(15, 23, 42, 0.08);
+
+  /* === SPACING SCALE === */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+
+  /* === LAYOUT === */
+  --max-width: 1080px;
+
+  /* === TYPOGRAPHY === */
+  --font-primary: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-brand: "Lemon", serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* === BORDERS & RADIUS === */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 12px;
+  --radius-xl: 15px;
+
+  /* === SHADOWS === */
+  --shadow-card: 0 18px 40px var(--color-shadow);
+
+  /* === TRANSITIONS === */
+  --transition-fast: 150ms ease;
+  --transition-normal: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* === COMMON GRADIENTS === */
+  --gradient-navy: linear-gradient(120deg, var(--color-navy-alpha-95), var(--color-navy-medium-alpha-95));
+  --gradient-navy-contact: linear-gradient(120deg, var(--color-navy), var(--color-navy-light));
+}
