@@ -6,20 +6,136 @@ body_class: page--home
 stylesheets:
   - home
 ---
+<head>
+  <script src="_pages\countdown.js"> </script>
 
-<section class="page-banner">
-  <div class="page-banner__inner hero-grid">
-    <div>
-      <p class="eyebrow">FRC Team 5596</p>
-      <h1 class="page-banner__title">Wolverine Robotics</h1>
-      <p class="page-banner__subtitle">Use this space to introduce the team, the current season, and the impact you make in the community.</p>
+</head>
+<div class="container">     
+<h1 class="titlename"> <center> Wolverine Robotics </center> </h1>
+  <section class="page-banner">
+    <div class="page-banner__inner hero-grid">
+      <div>
+        <p class="eyebrow">FRC Team 5596 Wolverine Robotics</p>
+        <h1 class="page-banner__title">The Team</h1>
+        <p class="page-banner__subtitle">Wolverine Robotics is a Scarborough base FRC team from Mary Ward Catholic Secondary School.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="primary" href="{{ '/about/' | relative_url }}">About Us</a>
+        <a class="secondary" href="{{ '/sponsors/' | relative_url }}">Support the Team</a>
+      </div>
     </div>
-    <div class="cta-actions">
-      <a class="primary" href="{{ '/events/' | relative_url }}">Upcoming Events</a>
-      <a class="secondary" href="{{ '/sponsors/' | relative_url }}">Support the Team</a>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
+
+  <main class="main-content" id="main-content">
+    <section>
+
+      <div class="gallery">
+        <img src="assets\css\images\windsor2023.JPG" alt="Windsor 2023" class="gallery-item" width="400" height="500"
+      onclick="openModal('modal1', 'Windsor 2023')">
+        <img src="assets\css\images\OHYEAH.jpg" alt="Team 5596" class="gallery-item" width="400" height="500"
+      onclick="openModal('modal2', 'Team 5596')">
+        <img src="assets\css\images\ouen2023.jpg" alt="human player" class="gallery-item" width="400" height="500"
+      onclick="openModal('modal3', 'Human player')">
+        <img src="assets\css\images\robotcresendo.jpg" alt="Crescendo Robot" class="gallery-item" width="400" height="500"
+      onclick="openModal('modal4', 'Crescendo Robot')">
+      </div>
+
+      <div id="modal1" class="modal">
+        <span class="close" onclick="closeModal('modal1')"> &times; </span>
+        <img src="windsor2023.JPG" alt="Windsor 2023" width="400" height="500">
+        <div class="caption"></div>
+      </div>
+
+      <div id="modal2" class="modal">
+        <span class="close" onclick="closeModal('modal2')"> &times; </span>
+        <img src="OHYEAH.jpg" alt="Team 5596" width="400" height="500">
+        <div class="caption"></div>
+      </div>
+
+      <div id="modal3" class="modal">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <img src="ouen2023.jpg" alt="Team 5596" width="400" height="500">
+        <div class="caption"></div>
+      </div>
+
+      <div id="modal4" class="modal">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <img src="robotcresendo.jpg" alt="Team 5596" width="400" height="500">
+        <div class="caption"></div>
+      </div>
+
+      <script src="_pages\components\gallery.js"> </script>
+    </section>
+    
+    <section>
+      <div id="countdown" class="countdown">
+        <h2> <center> 2026 FRC Kickoff </center> </h2>
+        <ul>
+          <li> <span id="days">00</span>days</li>
+          <li> <span id="hours">00</span>hours</li>
+          <li class="seperator">:</li>
+          <li> <span id="minutes">00</span>minutes</li>
+          <li class="seperator">:</li>
+          <li> <span id="seconds">00</span>seconds</li>
+        </ul>
+      </div>
+      <script src="_pages\components\countdown.js"> </script>
+    </section>
+
+  
+    <section>
+      <header>
+        <h2>Where to Start</h2>
+        <p>Help visitors quickly explore the most important pages.</p>
+      </header>
+      <div class="quick-links">
+        <article>
+          <h3>Meet the Team</h3>
+          <p>Share the story behind Wolverine Robotics, your mentors, and student leaders.</p>
+          <p><a href="{{ '/about/' | relative_url }}">Explore About &rarr;</a></p>
+        </article>
+        <article>
+          <h3>Competition Schedule</h3>
+          <p>Highlight the next key dates and invite the community to cheer you on.</p>
+          <p><a href="{{ '/events/' | relative_url }}">View Events &rarr;</a></p>
+        </article>
+        <article>
+          <h3>Stay Updated</h3>
+          <p>Preview blog updates, build season recaps, or community outreach stories.</p>
+          <p><a href="{{ '/blog/' | relative_url }}">Read the Blog &rarr;</a></p>
+        </article>
+      </div>
+    </section>
+  
+    <section>
+      <header>
+        <h2>Season Highlights</h2>
+        <p>Use these cards for game summaries, awards, and ways to get involved.</p>
+      </header>
+      <div class="highlights-grid">
+        <article>
+          <h3>Robotics Game Summary</h3>
+          <p>Summarize the current FRC game and how the team plans to tackle the challenge.</p>
+        </article>
+        <article>
+          <h3>Key Achievements</h3>
+          <p>Call out awards, outreach milestones, or notable technical breakthroughs from recent seasons.</p>
+        </article>
+        <article>
+          <h3>Get Involved</h3>
+          <p>Invite students, mentors, volunteers, and sponsors to participate through meetings or events.</p>
+        </article>
+      </div>
+    </section>
+  
+    <section class="support-banner">
+      <h2>Join Our Mission</h2>
+      <p>Provide a clear call to action for donations, mentorship, or collaboration opportunities.</p>
+      <a href="{{ '/contact/' | relative_url }}">Contact the Team</a>
+    </section>
+  </main>
+
 
 <main class="main-content" id="main-content">
   <section>
