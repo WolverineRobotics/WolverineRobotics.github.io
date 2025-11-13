@@ -55,7 +55,7 @@ img {
 .site-nav__link {
   text-decoration: none;
   font-weight: 600;
-  padding: 0.25rem 0.5rem;
+  padding: calc(var(--space-xs) / 2) var(--space-xs);
   border-radius: var(--radius-sm);
   transition: background var(--transition-fast);
 }
@@ -115,7 +115,7 @@ section p {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: calc(var(--space-sm) * 0.8);
   color: var(--color-white-alpha-75);
 }
 

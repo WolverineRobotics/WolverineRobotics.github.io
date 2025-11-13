@@ -9,8 +9,8 @@ stylesheets:
 
 <section class="page-banner">
   <div class="page-banner__inner">
-    <h1 class="page-banner__title">Team Updates</h1>
-    <p class="page-banner__subtitle">Introduce the type of stories you publish here—build diaries, competition recaps, outreach spotlights, and student features.</p>
+    <h1 class="page-banner__title">Blog</h1>
+    <p class="page-banner__subtitle">Updates, insights, and stories from Team 5596</p>
   </div>
 </section>
 
@@ -18,39 +18,56 @@ stylesheets:
   <section>
     <header>
       <h2>Latest Posts</h2>
-      <p>Posts are pulled automatically from files inside the <code>_blogs/</code> directory.</p>
     </header>
-    {% assign recent_posts = site.blogs | sort: 'date' | reverse %}
-    {% if recent_posts == empty %}
-    <p class="empty-state">No posts yet. Add markdown files to <code>_blogs/</code> to populate this section.</p>
-    {% else %}
+
+    {% if site.blogs.size > 0 %}
     <div class="post-grid">
-      {% for post in recent_posts limit: 9 %}
+      {% assign sorted_blogs = site.blogs | sort: 'date' | reverse %}
+      {% for blog in sorted_blogs %}
       <article class="post-card">
-        <header>
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %d, %Y' }}</time>
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </header>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        <footer>
-          <a href="{{ post.url | relative_url }}">Continue reading &rarr;</a>
-        </footer>
+        {% assign blog_path_parts = blog.path | split: '/' %}
+        {% assign blog_folder = blog_path_parts[1] %}
+        {% capture thumbnail_url %}/blog/{{ blog_folder }}/assets/thumbnail.jpg{% endcapture %}
+        {% if blog.path contains '/' %}
+          <a href="{{ blog.url | relative_url }}" class="post-card__thumbnail">
+            <img src="{{ thumbnail_url | relative_url }}" alt="{{ blog.title }}" onerror="this.parentElement.style.display='none'">
+          </a>
+        {% endif %}
+        <div class="post-card__content">
+          <header>
+            <time datetime="{{ blog.date | date: '%Y-%m-%d' }}">{{ blog.date | date: "%B %d, %Y" }}</time>
+            <h3><a href="{{ blog.url | relative_url }}">{{ blog.title }}</a></h3>
+          </header>
+          {% if blog.excerpt %}
+          <p>{{ blog.excerpt }}</p>
+          {% endif %}
+          <footer>
+            <a href="{{ blog.url | relative_url }}">Read more →</a>
+          </footer>
+        </div>
       </article>
       {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+      <p><strong>No blog posts yet!</strong></p>
+      <p>Check back soon for updates from Team 5596.</p>
     </div>
     {% endif %}
   </section>
 
   <section>
     <header>
-      <h2>Content Ideas</h2>
-      <p>Keep contributors inspired with recurring story themes.</p>
+      <h2>Blog Topics</h2>
     </header>
+    <p>We write about a variety of topics related to FIRST Robotics and our team:</p>
     <ul class="blog-ideas">
-      <li>Build season weekly recaps with photos of prototypes and progress.</li>
-      <li>Competition strategy breakdowns, match analyses, and lessons learned.</li>
-      <li>Community outreach spotlights including camps, demonstrations, or mentorship.</li>
-      <li>Student or mentor profiles that share personal journeys in STEM.</li>
+      <li>Competition recaps and strategy breakdowns</li>
+      <li>Technical tutorials and build guides</li>
+      <li>Programming tips and code examples</li>
+      <li>Team events and community outreach</li>
+      <li>Behind-the-scenes robot development</li>
+      <li>Student and mentor perspectives</li>
     </ul>
   </section>
 </main>

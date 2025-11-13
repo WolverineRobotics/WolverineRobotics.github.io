@@ -13,25 +13,25 @@
 .hero-grid .cta-actions a {
   text-decoration: none;
   font-weight: 600;
-  padding: 0.65rem 1.4rem;
+  padding: calc(var(--space-sm) - 0.35rem) calc(var(--space-md) - 0.1rem);
   border-radius: 999px;
-  transition: transform 150ms ease, box-shadow 150ms ease;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .hero-grid .cta-actions a.primary {
   background: var(--color-gold);
-  color: #0f172a;
+  color: var(--color-dark-slate);
 }
 
 .hero-grid .cta-actions a.secondary {
-  border: 2px solid rgba(255, 255, 255, 0.45);
-  color: #fff;
+  border: 2px solid var(--color-white-alpha-75);
+  color: var(--color-white);
 }
 
 .hero-grid .cta-actions a:hover,
 .hero-grid .cta-actions a:focus {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+  box-shadow: var(--shadow-card);
 }
 
 .quick-links {
@@ -41,7 +41,7 @@
 }
 
 .quick-links article {
-  border: 1px solid rgba(2, 48, 71, 0.1);
+  border: 1px solid var(--color-navy-alpha-10);
 }
 
 .highlights-grid {
@@ -59,14 +59,14 @@
   display: grid;
   gap: var(--space-sm);
   justify-items: start;
-  background: linear-gradient(120deg, #ffb703, #fb8500);
-  color: #0f172a;
+  background: linear-gradient(120deg, var(--color-gold), #fb8500);
+  color: var(--color-dark-slate);
 }
 
 .support-banner a {
   text-decoration: none;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-dark-slate);
 }
 
 @media (max-width: 720px) {
