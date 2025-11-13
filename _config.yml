@@ -16,13 +16,13 @@ collections:
     permalink: /:name/
   blogs:
     output: true
-    permalink: /blog/:title/
+    permalink: /blog/:path/
 defaults:
   - scope:
       path: ""
       type: blogs
     values:
-      layout: post
+      layout: blog-post
 header_pages:
   - _pages/home.html
   - _pages/about.html

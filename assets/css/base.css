@@ -1,15 +1,4 @@
-:root {
-  --color-navy: #023047;
-  --color-gold: #ffb703;
-  --color-slate: #1f2933;
-  --color-muted: #6b7280;
-  --color-bg: #f4f7fb;
-  --max-width: 1080px;
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 1.5rem;
-  --space-lg: 2.5rem;
-}
+/* Theme variables are now defined in themes.css */
 
 * {
   box-sizing: border-box;
@@ -17,7 +6,7 @@
 
 body {
   margin: 0;
-  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-primary);
   color: var(--color-slate);
   background: var(--color-bg);
 }
@@ -37,8 +26,8 @@ img {
 }
 
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid rgba(2, 48, 71, 0.1);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-navy-alpha-10);
 }
 
 .site-header__inner {
@@ -66,20 +55,20 @@ img {
 .site-nav__link {
   text-decoration: none;
   font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.4rem;
-  transition: background 150ms ease;
+  padding: calc(var(--space-xs) / 2) var(--space-xs);
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-fast);
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus {
-  background: rgba(2, 48, 71, 0.08);
+  background: var(--color-navy-alpha-08);
 }
 
 .page-banner {
   padding: calc(var(--space-lg) * 0.75) var(--space-sm);
-  background: linear-gradient(120deg, rgba(2, 48, 71, 0.95), rgba(19, 78, 94, 0.95));
-  color: #fff;
+  background: var(--gradient-navy);
+  color: var(--color-white);
 }
 
 .page-banner__inner {
@@ -95,7 +84,7 @@ img {
 .page-banner__subtitle {
   margin: 0;
   max-width: 48ch;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-white-alpha-85);
 }
 
 .main-content {
@@ -106,10 +95,10 @@ img {
 
 section {
   margin-bottom: var(--space-lg);
-  background: #fff;
+  background: var(--color-white);
   padding: var(--space-md);
-  border-radius: 0.8rem;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
 section header h2 {
@@ -126,13 +115,13 @@ section p {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-weight: 700;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: calc(var(--space-sm) * 0.8);
+  color: var(--color-white-alpha-75);
 }
 
 .site-footer {
-  background: #0f172a;
-  color: rgba(255, 255, 255, 0.75);
+  background: var(--color-dark-slate);
+  color: var(--color-white-alpha-75);
   padding: var(--space-md) var(--space-sm);
 }
 

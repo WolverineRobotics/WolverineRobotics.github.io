@@ -1,6 +1,6 @@
 h2 {
-  font-family: cursive;
-  font-size: 40px;
+  font-family: var(--font-brand);
+  font-size: calc(var(--space-lg) * 1.6);
 }
 
 .subteam-members{
@@ -10,9 +10,9 @@ h2 {
 
 .subteam-members th,
 .subteam-members td {
-  padding: 0.75rem 0.5rem;
+  padding: calc(var(--space-sm) - 0.25rem) var(--space-xs);
   text-align: left;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid var(--color-navy-alpha-08);
 }
 
 .values-list {
@@ -24,10 +24,10 @@ h2 {
 }
 
 .values-list li {
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--color-white-alpha-85);
   border-left: 4px solid var(--color-gold);
   padding: var(--space-sm);
-  border-radius: 0.35rem;
+  border-radius: var(--radius-sm);
 }
 
 .leadership-table {
@@ -37,9 +37,9 @@ h2 {
 
 .leadership-table th,
 .leadership-table td {
-  padding: 0.75rem 0.5rem;
+  padding: calc(var(--space-sm) - 0.25rem) var(--space-xs);
   text-align: left;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid var(--color-navy-alpha-08);
 }
 
 .timeline {
@@ -52,15 +52,15 @@ h2 {
 .timeline::before {
   content: "";
   position: absolute;
-  left: 1rem;
-  top: 0.25rem;
-  bottom: 0.25rem;
+  left: var(--space-sm);
+  top: calc(var(--space-xs) / 2);
+  bottom: calc(var(--space-xs) / 2);
   width: 3px;
-  background: rgba(2, 48, 71, 0.3);
+  background: var(--color-navy-alpha-25);
 }
 
 .timeline li {
-  margin-left: 2.5rem;
+  margin-left: calc(var(--space-lg) + 0.5rem);
   margin-bottom: var(--space-sm);
   padding-left: var(--space-sm);
   border-left: 3px solid transparent;
@@ -73,10 +73,10 @@ h2 {
 
 @media (max-width: 720px) {
   .timeline::before {
-    left: 0.5rem;
+    left: var(--space-xs);
   }
 
   .timeline li {
-    margin-left: 1.5rem;
+    margin-left: var(--space-md);
   }
 }

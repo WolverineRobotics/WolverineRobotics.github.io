@@ -10,11 +10,11 @@
 }
 
 .tier-card ul {
-  padding-left: 1.25rem;
+  padding-left: calc(var(--space-sm) + 0.25rem);
 }
 
 .in-kind {
-  border-left: 4px solid rgba(2, 48, 71, 0.2);
+  border-left: 4px solid var(--color-navy-alpha-25);
 }
 
 .partner-gallery {
@@ -25,17 +25,17 @@
 
 .partner-gallery li {
   list-style: none;
-  background: rgba(2, 48, 71, 0.04);
-  padding: 0.75rem;
+  background: var(--color-navy-alpha-08);
+  padding: calc(var(--space-sm) - 0.25rem);
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
 }
 
 .callout-banner {
   display: grid;
   gap: var(--space-xs);
-  background: linear-gradient(120deg, #023047, #035e7b);
-  color: #fff;
+  background: linear-gradient(120deg, var(--color-navy), var(--color-navy-light));
+  color: var(--color-white);
   justify-items: start;
 }
 

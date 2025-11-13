@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/themes.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/header.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/footer.css' | relative_url }}">
@@ -18,7 +19,7 @@
 <body class="page {% if page.body_class %}{{ page.body_class }}{% endif %}">
   <header class="site-header">
   <div class="site-header__inner">
-    <img src="{{ '/assets/images/logo.svg | relative_url }}" alt="Team 5596 Logo" class="brand-logo">
+    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Team 5596 Logo" class="brand-logo">
     <span class="brand-name">Team 5596</span>
     <nav class="site-nav" aria-label="Primary">
       <a class="site-nav__link" href="{{ '/' | relative_url }}">Home</a>
@@ -48,9 +49,8 @@
       <p>CHECK OUT OUR OFFICIAL ACCOUNTS</p>
     </div>
     <div class="footer-right">
-      <a href="#"><img src="instagram.svg" alt="Instagram" /></a>
-      <a href="#"><img src="twitter.svg" alt="Twitter" /></a>
-      <a href="#"><img src="youtube.svg" alt="YouTube" /></a>
+      <a href="#"><img src="{{ '/assets/images/instagram.svg' | relative_url }}" alt="Instagram" /></a>
+      <a href="#"><img src="{{ '/assets/images/youtube.svg' | relative_url }}" alt="YouTube" /></a>
     </div>
   </div>
 
