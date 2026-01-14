@@ -4,7 +4,7 @@ var daysEl = document.getElementById('days')
 var secondsEl = document.getElementById('seconds')
 
 function countdownTimer() {
-    const countDownDate = new Date('01/10/2026').getTime()
+    const countDownDate = new Date('03/13/2026').getTime()
 
     //convert to milliseconds
     const second = 1000
